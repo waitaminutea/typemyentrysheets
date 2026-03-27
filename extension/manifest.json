@@ -17,6 +17,16 @@
   "icons": {
     "48": "icons/icon48.png"
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["fieldMap.json"],
+      "matches": [
+        "*://*.axol.jp/*",
+        "*://*.mynavi.jp/*",
+        "*://*.rikunabi.com/*"
+      ]
+    }
+  ],
   "content_scripts": [
     {
       "matches": [
