@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>就活自動入力</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+      font-size: 13px;
+      width: 340px;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: #1a56db;
+      color: #fff;
+      padding: 12px 16px;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .container {
+      padding: 12px 16px 16px;
+      max-height: 520px;
+      overflow-y: auto;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: bold;
+      color: #1a56db;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 14px 0 6px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #d0d9f0;
+    }
+
+    .row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    label {
+      font-size: 11px;
+      color: #555;
+      margin-bottom: 2px;
+    }
+
+    input, select {
+      padding: 5px 8px;
+      border: 1px solid #ccd3e0;
+      border-radius: 4px;
+      font-size: 13px;
+      background: #fff;
+      outline: none;
+      transition: border-color 0.15s;
+      width: 100%;
+    }
+
+    input:focus, select:focus {
+      border-color: #1a56db;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    button {
+      flex: 1;
+      padding: 8px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    #btnSave {
+      background: #1a56db;
+      color: #fff;
+    }
+
+    #btnFill {
+      background: #16a34a;
+      color: #fff;
+    }
+
+    #status {
+      margin-top: 8px;
+      font-size: 12px;
+      text-align: center;
+      color: #16a34a;
+      min-height: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>📝 就活エントリーシート自動入力</header>
+  <div class="container">
+
+    <!-- 氏名 -->
+    <div class="section-title">氏名</div>
+    <div class="row">
+      <div class="field">
+        <label for="sei">姓</label>
+        <input type="text" id="sei" placeholder="山田" />
+      </div>
+      <div class="field">
+        <label for="mei">名</label>
+        <input type="text" id="mei" placeholder="太郎" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="sei_kana">姓（カナ）</label>
+        <input type="text" id="sei_kana" placeholder="ヤマダ" />
+      </div>
+      <div class="field">
+        <label for="mei_kana">名（カナ）</label>
+        <input type="text" id="mei_kana" placeholder="タロウ" />
+      </div>
+    </div>
+
+    <!-- 生年月日 -->
+    <div class="section-title">生年月日</div>
+    <div class="row">
+      <div class="field">
+        <label for="birthYear">年</label>
+        <input type="number" id="birthYear" placeholder="2002" min="1950" max="2010" />
+      </div>
+      <div class="field">
+        <label for="birthMonth">月</label>
+        <input type="number" id="birthMonth" placeholder="4" min="1" max="12" />
+      </div>
+      <div class="field">
+        <label for="birthDay">日</label>
+        <input type="number" id="birthDay" placeholder="1" min="1" max="31" />
+      </div>
+    </div>
+
+    <!-- 連絡先 -->
+    <div class="section-title">連絡先</div>
+    <div class="row">
+      <div class="field">
+        <label for="tel">電話番号</label>
+        <input type="tel" id="tel" placeholder="090-1234-5678" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="mail">メールアドレス</label>
+        <input type="email" id="mail" placeholder="taro@example.com" />
+      </div>
+    </div>
+
+    <!-- 住所 -->
+    <div class="section-title">住所</div>
+    <div class="row">
+      <div class="field">
+        <label for="zip">郵便番号</label>
+        <input type="text" id="zip" placeholder="100-0001" />
+      </div>
+      <div class="field">
+        <label for="prefecture">都道府県</label>
+        <select id="prefecture">
+          <option value="">選択してください</option>
+          <option value="北海道">北海道</option>
+          <option value="青森県">青森県</option>
+          <option value="岩手県">岩手県</option>
+          <option value="宮城県">宮城県</option>
+          <option value="秋田県">秋田県</option>
+          <option value="山形県">山形県</option>
+          <option value="福島県">福島県</option>
+          <option value="茨城県">茨城県</option>
+          <option value="栃木県">栃木県</option>
+          <option value="群馬県">群馬県</option>
+          <option value="埼玉県">埼玉県</option>
+          <option value="千葉県">千葉県</option>
+          <option value="東京都">東京都</option>
+          <option value="神奈川県">神奈川県</option>
+          <option value="新潟県">新潟県</option>
+          <option value="富山県">富山県</option>
+          <option value="石川県">石川県</option>
+          <option value="福井県">福井県</option>
+          <option value="山梨県">山梨県</option>
+          <option value="長野県">長野県</option>
+          <option value="岐阜県">岐阜県</option>
+          <option value="静岡県">静岡県</option>
+          <option value="愛知県">愛知県</option>
+          <option value="三重県">三重県</option>
+          <option value="滋賀県">滋賀県</option>
+          <option value="京都府">京都府</option>
+          <option value="大阪府">大阪府</option>
+          <option value="兵庫県">兵庫県</option>
+          <option value="奈良県">奈良県</option>
+          <option value="和歌山県">和歌山県</option>
+          <option value="鳥取県">鳥取県</option>
+          <option value="島根県">島根県</option>
+          <option value="岡山県">岡山県</option>
+          <option value="広島県">広島県</option>
+          <option value="山口県">山口県</option>
+          <option value="徳島県">徳島県</option>
+          <option value="香川県">香川県</option>
+          <option value="愛媛県">愛媛県</option>
+          <option value="高知県">高知県</option>
+          <option value="福岡県">福岡県</option>
+          <option value="佐賀県">佐賀県</option>
+          <option value="長崎県">長崎県</option>
+          <option value="熊本県">熊本県</option>
+          <option value="大分県">大分県</option>
+          <option value="宮崎県">宮崎県</option>
+          <option value="鹿児島県">鹿児島県</option>
+          <option value="沖縄県">沖縄県</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="address">住所（市区町村以降）</label>
+        <input type="text" id="address" placeholder="千代田区千代田1-1" />
+      </div>
+    </div>
+
+    <!-- 学歴 -->
+    <div class="section-title">学歴</div>
+    <div class="row">
+      <div class="field">
+        <label for="university">大学名</label>
+        <input type="text" id="university" placeholder="○○大学" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="faculty">学部</label>
+        <input type="text" id="faculty" placeholder="経済学部" />
+      </div>
+      <div class="field">
+        <label for="department">学科</label>
+        <input type="text" id="department" placeholder="経済学科" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="gradYear">卒業予定年</label>
+        <input type="number" id="gradYear" placeholder="2025" min="2020" max="2035" />
+      </div>
+      <div class="field">
+        <label for="gradMonth">卒業予定月</label>
+        <input type="number" id="gradMonth" placeholder="3" min="1" max="12" />
+      </div>
+    </div>
+
+    <!-- ボタン -->
+    <div class="btn-row">
+      <button id="btnSave">💾 保存する</button>
+      <button id="btnFill">✏️ このページに入力する</button>
+    </div>
+    <div id="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+{
+  "_comment": "フィールドマッピング定義。各エントリは { selectors, storageKey } の形式。",
+
+  "fields": [
+    {
+      "storageKey": "sei",
+      "selectors": [
+        "[name='sei']",
+        "[name='last_name']",
+        "[name='lastName']",
+        "[name='family_name']",
+        "[name='familyName']",
+        "[name='name_sei']",
+        "[name='kj_sei']",
+        "[name='sei_name']",
+        "[id='sei']",
+        "[id='last_name']",
+        "[id='lastName']",
+        "[id='family_name']",
+        "[id='familyName']",
+        "[id='name_sei']",
+        "[placeholder*='姓']",
+        "[placeholder*='名字']",
+        "[placeholder*='苗字']"
+      ]
+    },
+    {
+      "storageKey": "mei",
+      "selectors": [
+        "[name='mei']",
+        "[name='first_name']",
+        "[name='firstName']",
+        "[name='given_name']",
+        "[name='givenName']",
+        "[name='name_mei']",
+        "[name='kj_mei']",
+        "[name='mei_name']",
+        "[id='mei']",
+        "[id='first_name']",
+        "[id='firstName']",
+        "[id='given_name']",
+        "[id='givenName']",
+        "[id='name_mei']",
+        "[placeholder*='名']",
+        "[placeholder*='（名）']"
+      ]
+    },
+    {
+      "storageKey": "sei_kana",
+      "selectors": [
+        "[name='sei_kana']",
+        "[name='seiKana']",
+        "[name='last_name_kana']",
+        "[name='lastNameKana']",
+        "[name='family_name_kana']",
+        "[name='familyNameKana']",
+        "[name='kana_sei']",
+        "[name='sei_ruby']",
+        "[name='furigana_sei']",
+        "[id='sei_kana']",
+        "[id='seiKana']",
+        "[id='last_name_kana']",
+        "[id='lastNameKana']",
+        "[id='kana_sei']",
+        "[placeholder*='セイ']",
+        "[placeholder*='姓（カナ）']",
+        "[placeholder*='姓カナ']",
+        "[placeholder*='名字（フリガナ）']"
+      ]
+    },
+    {
+      "storageKey": "mei_kana",
+      "selectors": [
+        "[name='mei_kana']",
+        "[name='meiKana']",
+        "[name='first_name_kana']",
+        "[name='firstNameKana']",
+        "[name='given_name_kana']",
+        "[name='givenNameKana']",
+        "[name='kana_mei']",
+        "[name='mei_ruby']",
+        "[name='furigana_mei']",
+        "[id='mei_kana']",
+        "[id='meiKana']",
+        "[id='first_name_kana']",
+        "[id='firstNameKana']",
+        "[id='kana_mei']",
+        "[placeholder*='メイ']",
+        "[placeholder*='名（カナ）']",
+        "[placeholder*='名カナ']",
+        "[placeholder*='名前（フリガナ）']"
+      ]
+    },
+    {
+      "storageKey": "birthYear",
+      "selectors": [
+        "[name='birth_year']",
+        "[name='birthYear']",
+        "[name='birth_yyyy']",
+        "[name='birthday_year']",
+        "[name='birthdayYear']",
+        "[name='dob_year']",
+        "[name='year_of_birth']",
+        "[id='birth_year']",
+        "[id='birthYear']",
+        "[id='birth_yyyy']",
+        "[id='birthday_year']",
+        "[placeholder*='生年']",
+        "[placeholder*='年（西暦）']"
+      ]
+    },
+    {
+      "storageKey": "birthMonth",
+      "selectors": [
+        "[name='birth_month']",
+        "[name='birthMonth']",
+        "[name='birth_mm']",
+        "[name='birthday_month']",
+        "[name='birthdayMonth']",
+        "[name='dob_month']",
+        "[id='birth_month']",
+        "[id='birthMonth']",
+        "[id='birth_mm']",
+        "[id='birthday_month']"
+      ]
+    },
+    {
+      "storageKey": "birthDay",
+      "selectors": [
+        "[name='birth_day']",
+        "[name='birthDay']",
+        "[name='birth_dd']",
+        "[name='birthday_day']",
+        "[name='birthdayDay']",
+        "[name='dob_day']",
+        "[id='birth_day']",
+        "[id='birthDay']",
+        "[id='birth_dd']",
+        "[id='birthday_day']"
+      ]
+    },
+    {
+      "storageKey": "tel",
+      "selectors": [
+        "[name='tel']",
+        "[name='phone']",
+        "[name='phone_number']",
+        "[name='phoneNumber']",
+        "[name='mobile']",
+        "[name='mobile_phone']",
+        "[name='tel_no']",
+        "[name='telephone']",
+        "[name='cell_phone']",
+        "[id='tel']",
+        "[id='phone']",
+        "[id='phone_number']",
+        "[id='phoneNumber']",
+        "[id='mobile']",
+        "[placeholder*='電話番号']",
+        "[placeholder*='携帯番号']",
+        "[placeholder*='090']",
+        "[placeholder*='080']"
+      ]
+    },
+    {
+      "storageKey": "mail",
+      "selectors": [
+        "[name='mail']",
+        "[name='email']",
+        "[name='mail_address']",
+        "[name='mailAddress']",
+        "[name='e_mail']",
+        "[name='email_address']",
+        "[name='emailAddress']",
+        "[name='contact_mail']",
+        "[id='mail']",
+        "[id='email']",
+        "[id='mail_address']",
+        "[id='mailAddress']",
+        "[id='email_address']",
+        "[type='email']",
+        "[placeholder*='メールアドレス']",
+        "[placeholder*='メール']",
+        "[placeholder*='@']"
+      ]
+    },
+    {
+      "storageKey": "zip",
+      "selectors": [
+        "[name='zip_cd']",
+        "[name='zipCd']",
+        "[name='zip']",
+        "[name='zip_code']",
+        "[name='zipCode']",
+        "[name='postal_code']",
+        "[name='postalCode']",
+        "[name='post_no']",
+        "[name='yubin_bango']",
+        "[id='zip_cd']",
+        "[id='zipCd']",
+        "[id='zip']",
+        "[id='zip_code']",
+        "[id='postal_code']",
+        "[id='postalCode']",
+        "[placeholder*='郵便番号']",
+        "[placeholder*='〒']"
+      ]
+    },
+    {
+      "storageKey": "prefecture",
+      "selectors": [
+        "[name='prefecture']",
+        "[name='pref']",
+        "[name='pref_cd']",
+        "[name='prefCd']",
+        "[name='ken']",
+        "[name='todofuken']",
+        "[name='living_pref']",
+        "[name='address_pref']",
+        "[id='prefecture']",
+        "[id='pref']",
+        "[id='pref_cd']",
+        "[id='ken']",
+        "[id='todofuken']"
+      ]
+    },
+    {
+      "storageKey": "address",
+      "selectors": [
+        "[name='address']",
+        "[name='addr']",
+        "[name='address1']",
+        "[name='address_detail']",
+        "[name='addressDetail']",
+        "[name='city_address']",
+        "[name='street']",
+        "[name='street_address']",
+        "[name='streetAddress']",
+        "[name='jusho']",
+        "[id='address']",
+        "[id='addr']",
+        "[id='address1']",
+        "[id='address_detail']",
+        "[id='street_address']",
+        "[placeholder*='市区町村']",
+        "[placeholder*='番地']",
+        "[placeholder*='住所']"
+      ]
+    },
+    {
+      "storageKey": "university",
+      "selectors": [
+        "[name='university']",
+        "[name='univ']",
+        "[name='univ_name']",
+        "[name='univName']",
+        "[name='school_name']",
+        "[name='schoolName']",
+        "[name='college']",
+        "[name='college_name']",
+        "[name='daigaku']",
+        "[id='university']",
+        "[id='univ']",
+        "[id='univ_name']",
+        "[id='school_name']",
+        "[id='college']",
+        "[placeholder*='大学名']",
+        "[placeholder*='大学・大学院']"
+      ]
+    },
+    {
+      "storageKey": "faculty",
+      "selectors": [
+        "[name='faculty']",
+        "[name='department']",
+        "[name='gakubu']",
+        "[name='faculty_name']",
+        "[name='facultyName']",
+        "[name='school_faculty']",
+        "[name='dept']",
+        "[id='faculty']",
+        "[id='gakubu']",
+        "[id='faculty_name']",
+        "[placeholder*='学部']",
+        "[placeholder*='学部名']"
+      ]
+    },
+    {
+      "storageKey": "department",
+      "selectors": [
+        "[name='department']",
+        "[name='gakka']",
+        "[name='dept_name']",
+        "[name='deptName']",
+        "[name='major']",
+        "[name='major_name']",
+        "[name='course']",
+        "[id='department']",
+        "[id='gakka']",
+        "[id='dept_name']",
+        "[id='major']",
+        "[placeholder*='学科']",
+        "[placeholder*='専攻']",
+        "[placeholder*='コース']"
+      ]
+    },
+    {
+      "storageKey": "gradYear",
+      "selectors": [
+        "[name='grad_year']",
+        "[name='gradYear']",
+        "[name='graduation_year']",
+        "[name='graduationYear']",
+        "[name='sotsugyo_year']",
+        "[name='expected_grad_year']",
+        "[name='expected_graduation_year']",
+        "[id='grad_year']",
+        "[id='gradYear']",
+        "[id='graduation_year']",
+        "[id='expected_grad_year']",
+        "[placeholder*='卒業予定年']",
+        "[placeholder*='卒業年']"
+      ]
+    },
+    {
+      "storageKey": "gradMonth",
+      "selectors": [
+        "[name='grad_month']",
+        "[name='gradMonth']",
+        "[name='graduation_month']",
+        "[name='graduationMonth']",
+        "[name='sotsugyo_month']",
+        "[name='expected_grad_month']",
+        "[name='expected_graduation_month']",
+        "[id='grad_month']",
+        "[id='gradMonth']",
+        "[id='graduation_month']",
+        "[id='expected_grad_month']",
+        "[placeholder*='卒業予定月']",
+        "[placeholder*='卒業月']"
+      ]
+    }
+  ]
+}
